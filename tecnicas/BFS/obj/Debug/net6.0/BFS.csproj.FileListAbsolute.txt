@@ -13,3 +13,18 @@ C:\Daniel\ipca\licenciatura\Inteligencia Artificial\turma 2324\BFS\BFS\obj\Debug
 C:\Daniel\ipca\licenciatura\Inteligencia Artificial\turma 2324\BFS\BFS\obj\Debug\net6.0\BFS.pdb
 C:\Daniel\ipca\licenciatura\Inteligencia Artificial\turma 2324\BFS\BFS\obj\Debug\net6.0\BFS.genruntimeconfig.cache
 C:\Daniel\ipca\licenciatura\Inteligencia Artificial\turma 2324\BFS\BFS\obj\Debug\net6.0\ref\BFS.dll
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\bin\Debug\net6.0\BFS.exe
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\bin\Debug\net6.0\BFS.deps.json
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\bin\Debug\net6.0\BFS.runtimeconfig.json
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\bin\Debug\net6.0\BFS.dll
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\bin\Debug\net6.0\BFS.pdb
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.csproj.AssemblyReference.cache
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.AssemblyInfoInputs.cache
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.AssemblyInfo.cs
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.csproj.CoreCompileInputs.cache
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.dll
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\refint\BFS.dll
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.pdb
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\BFS.genruntimeconfig.cache
+C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\obj\Debug\net6.0\ref\BFS.dll

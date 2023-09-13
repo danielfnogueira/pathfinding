@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BFS
-build_property.ProjectDir = C:\Daniel\ipca\licenciatura\Inteligencia Artificial\turma 2324\BFS\BFS\
+build_property.ProjectDir = C:\Daniel\ipca\licenciatura\Inteligencia Artificial\projeto\pathfinding_IA_Games\pathfinding\tecnicas\BFS\
