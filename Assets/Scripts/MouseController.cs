@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
-    
-    /*
-     * Detects when mouse is left button pressed
-     * when pressed, it will detect the 2D object it is pointing to
-     * if it has tag "Respawn" it will access the its PathSwitch script
-     * if the IsBlocked is true, it means it is a wall, and it will ClearPath()
-     * we have to ensure it is a walkable path, so we check IsOnlyWalk()
-     * Being !IsBlocked() and IsOnlyWalk(), we AddPath(pathType.block)
-     * other configurations will be ignored by the mouse holding action
-     */
-    
-    private float cooldownTime = 2f;
+    private float cooldownTime = 1.0f; // Adjust this to the desired hold duration
     private Hashtable cooldownTable = new Hashtable();
+    private bool isMouseHeld = false;
+    private float mouseHeldStartTime = 0.0f;
 
     void Update()
     {
         // Detect if the left mouse button is being held down
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
+        {
+            isMouseHeld = true;
+            mouseHeldStartTime = Time.time;
+        }
+        
+        // Check if the mouse button is released
+        if (Input.GetMouseButtonUp(0))
+        {
+            isMouseHeld = false;
+        }
+
+        // Execute when the mouse has been held for the specified duration
+        if (isMouseHeld && Time.time - mouseHeldStartTime >= cooldownTime)
         {
             // Cast a ray from the camera to the mouse position
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -58,5 +62,4 @@ public class MouseController : MonoBehaviour
             }
         }
     }
-   
 }

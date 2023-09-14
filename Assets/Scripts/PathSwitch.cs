@@ -13,12 +13,20 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
         red = 2,
         green = 3,
         blue = 4,
+        enter = 5,
+        exit = 6
     }
     
     public GameObject blockPath;
     public GameObject redPath;
     public GameObject greenPath;
     public GameObject bluePath;
+    public GameObject inPath;
+    public GameObject outPath;
+    
+    private bool canClick = true; 
+    private float clickCooldown = 0.3f; 
+
 
     public void AddPath(int type)
     {
@@ -40,6 +48,12 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
                 break;
             case pathType.blue:
                 bluePath.SetActive(true);
+                break;
+            case pathType.enter:
+                inPath.SetActive(true);
+                break;
+            case pathType.exit:
+                outPath.SetActive(true);
                 break;
         }
     }
@@ -69,6 +83,8 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
         redPath.SetActive(false);
         greenPath.SetActive(false);
         bluePath.SetActive(false);
+        inPath.SetActive(false);
+        outPath.SetActive(false);
     }
     
     public bool IsBlocked()
@@ -83,17 +99,39 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Write your code here for what you want to happen
-        Debug.Log("You clicked the square!");
+        if (!canClick) // If clicking is on cooldown, return early.
+            return;
         
         if (blockPath.activeSelf)
         {
-            blockPath.SetActive(false);
+            ClearPath();
+            inPath.SetActive(true);
+        }
+        else if (inPath.activeSelf)
+        {
+            ClearPath();
+            outPath.SetActive(true);
+        }
+        else if (outPath.activeSelf)
+        {
+            ClearPath();
+            outPath.SetActive(false);
         }
         else
         {
+            ClearPath();
             blockPath.SetActive(true);
         }
+
+        // Start the cooldown timer.
+        StartCoroutine(ClickCooldown());
+    }
+
+    private IEnumerator ClickCooldown()
+    {
+        canClick = false;
+        yield return new WaitForSeconds(clickCooldown);
+        canClick = true;
     }
     
 }
