@@ -75,6 +75,11 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
     {
         return blockPath.activeSelf;
     }
+    
+    public bool IsOnlyWalk()
+    {
+        return !blockPath.activeSelf && !redPath.activeSelf && !greenPath.activeSelf && !bluePath.activeSelf;
+    }
 
     public void OnPointerClick(PointerEventData eventData)
     {
