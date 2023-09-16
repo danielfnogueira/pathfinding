@@ -19,7 +19,7 @@ public class ValidatePath : MonoBehaviour
         // loop through all children of pathParent and add the ones with inPath active to inChildren
         foreach (Transform child in pathParent.transform)
         {
-            if (child.gameObject.GetComponent<PathSwitch>().Type() == PathSwitch.pathType.enter)
+            if (child.gameObject.GetComponent<PathSwitch>().Type() == PathType.enter)
                 inChildren.Add(child.gameObject);
         }
         
@@ -44,7 +44,7 @@ public class ValidatePath : MonoBehaviour
         // loop through all children of pathParent and add the ones with outPath active to outChildren
         foreach (Transform child in pathParent.transform)
         {
-            if (child.gameObject.GetComponent<PathSwitch>().Type() == PathSwitch.pathType.exit)
+            if (child.gameObject.GetComponent<PathSwitch>().Type() == PathType.exit)
                 outChildren.Add(child.gameObject);
         }
         

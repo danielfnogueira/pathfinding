@@ -52,7 +52,7 @@ public class MouseController : MonoBehaviour
                         else if (pathSwitch.IsOnlyWalk())
                         {
                             // Add a blocked path
-                            pathSwitch.AddPath((int)PathSwitch.pathType.block);
+                            pathSwitch.AddPath((int)PathType.block);
                         }
 
                         // Update the cooldown table

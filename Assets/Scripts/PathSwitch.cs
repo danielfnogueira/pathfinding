@@ -6,19 +6,6 @@ using UnityEngine.EventSystems;
 
 public class PathSwitch : MonoBehaviour, IPointerClickHandler
 {
-    public enum pathType : int
-    {
-        walk = 0,
-        block = 1,
-        red = 2,
-        green = 3,
-        blue = 4,
-        orange = 8, //TODO: IMPLEMENT
-        purple = 9, //TODO: IMPLEMENT
-        enter = 5,
-        exit = 6
-    }
-
     public GameObject blockPath;
     public GameObject redPath;
     public GameObject greenPath;
@@ -29,21 +16,21 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
     private bool canClick = true;
     private float clickCooldown = 0.3f;
     
-    public IList<pathType> Types()
+    public IList<PathType> Types()
     {
-        List<pathType> types = new List<pathType>();
+        List<PathType> types = new List<PathType>();
         if (blockPath.activeSelf)
-            types.Add(pathType.block);
+            types.Add(PathType.block);
         if (redPath.activeSelf)
-            types.Add(pathType.red);
+            types.Add(PathType.red);
         if (greenPath.activeSelf)
-            types.Add(pathType.green);
+            types.Add(PathType.green);
         if (bluePath.activeSelf)
-            types.Add(pathType.blue);
+            types.Add(PathType.blue);
         if (inPath.activeSelf)
-            types.Add(pathType.enter);
+            types.Add(PathType.enter);
         if (outPath.activeSelf)
-            types.Add(pathType.exit);
+            types.Add(PathType.exit);
         return types;
     }
 
@@ -51,62 +38,62 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
      * In, Out and block are major types
      * Get type will return one of then or walk
      */
-    public pathType Type()
+    public PathType Type()
     {
         if (blockPath.activeSelf)
-            return pathType.block;
+            return PathType.block;
         if (inPath.activeSelf)
-            return pathType.enter;
+            return PathType.enter;
         if (outPath.activeSelf)
-            return pathType.exit;
-        return pathType.walk;
+            return PathType.exit;
+        return PathType.walk;
     }
 
 
 public void AddPath(int type)
     {
-        AddPath((pathType)type);
+        AddPath((PathType)type);
     }
     
-    private void AddPath(pathType type)
+    private void AddPath(PathType type)
     {
         switch (type)
         {
-            case pathType.block:
+            case PathType.block:
                 blockPath.SetActive(true);
                 break;
-            case pathType.red:
+            case PathType.red:
                 redPath.SetActive(true);
                 break;
-            case pathType.green:
+            case PathType.green:
                 greenPath.SetActive(true);
                 break;
-            case pathType.blue:
+            case PathType.blue:
                 bluePath.SetActive(true);
                 break;
-            case pathType.enter:
+            case PathType.enter:
                 inPath.SetActive(true);
                 break;
-            case pathType.exit:
+            case PathType.exit:
                 outPath.SetActive(true);
                 break;
         }
     }
     
-    public void RemovePath(pathType type)
+    public void RemovePath(PathType type)
     {
         switch (type)
         {
-            case pathType.block:
+            case PathType.block:
                 blockPath.SetActive(false);
                 break;
-            case pathType.red:
+            case PathType.red:
                 redPath.SetActive(false);
                 break;
-            case pathType.green:
+            case PathType.green:
                 greenPath.SetActive(false);
                 break;
-            case pathType.blue:
+            case PathType.blue:
                 bluePath.SetActive(false);
                 break;
         }
