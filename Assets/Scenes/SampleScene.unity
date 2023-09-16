@@ -133,9 +133,10 @@ GameObject:
   m_Component:
   - component: {fileID: 154424020}
   - component: {fileID: 154424019}
+  - component: {fileID: 154424021}
   m_Layer: 0
   m_Name: FieldsContainer
-  m_TagString: Untagged
+  m_TagString: FieldsContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,6 +209,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154424021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154424018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319b3f01286d3bd4697372b4aa6ecc25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &243538930
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +233,7 @@ GameObject:
   - component: {fileID: 243538933}
   - component: {fileID: 243538932}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: DFS (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +292,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: DFS
 --- !u!222 &243538933
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -301,7 +314,7 @@ GameObject:
   - component: {fileID: 250271731}
   - component: {fileID: 250271730}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: DFS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,7 +583,7 @@ GameObject:
   - component: {fileID: 424092690}
   - component: {fileID: 424092689}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text AStar (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -629,7 +642,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: AStar
 --- !u!222 &424092690
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -943,7 +956,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: ???
 --- !u!222 &578967555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -965,7 +978,7 @@ GameObject:
   - component: {fileID: 587556400}
   - component: {fileID: 587556399}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: BFS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,7 +1100,7 @@ GameObject:
   - component: {fileID: 691350388}
   - component: {fileID: 691350387}
   m_Layer: 5
-  m_Name: Button (Legacy) (3)
+  m_Name: Dijkstra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1208,7 +1221,7 @@ GameObject:
   - component: {fileID: 756915207}
   - component: {fileID: 756915206}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text Dijkstra (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1267,7 +1280,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Dijkstra
 --- !u!222 &756915207
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1372,7 +1385,7 @@ GameObject:
   - component: {fileID: 774761857}
   - component: {fileID: 774761856}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text BFS (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1431,7 +1444,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: BFS
 --- !u!222 &774761857
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1974,7 +1987,7 @@ GameObject:
   - component: {fileID: 1329091504}
   - component: {fileID: 1329091503}
   m_Layer: 5
-  m_Name: Button (Legacy) (2)
+  m_Name: AStar (Legacy) (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2164,10 +2177,10 @@ RectTransform:
   m_Father: {fileID: 559887902}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122.8, y: 110.5}
-  m_SizeDelta: {x: 40, y: 32}
+  m_AnchorMin: {x: 0.1917115, y: 0.8748432}
+  m_AnchorMax: {x: 0.2722885, y: 1}
+  m_AnchoredPosition: {x: 0.2000122, y: -2}
+  m_SizeDelta: {x: 2, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1514871088
 MonoBehaviour:
@@ -2232,7 +2245,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 20
+  m_Text: 14
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -2347,18 +2360,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 70
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 70
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 8
 --- !u!222 &1611874297
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2507,18 +2520,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 70
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 71
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 14
 --- !u!222 &1980622311
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2697,10 +2710,10 @@ RectTransform:
   m_Father: {fileID: 559887902}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82.8, y: 110.5}
-  m_SizeDelta: {x: 40, y: 32}
+  m_AnchorMin: {x: 0.27977008, y: 0.88100004}
+  m_AnchorMax: {x: 0.358, y: 1}
+  m_AnchoredPosition: {x: 0.69992065, y: -3.5}
+  m_SizeDelta: {x: 5, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2104242535
 MonoBehaviour:
@@ -2765,7 +2778,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 20
+  m_Text: 8
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -2855,10 +2868,10 @@ RectTransform:
   m_Father: {fileID: 559887902}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 172.6, y: 221}
-  m_SizeDelta: {x: 40, y: 32}
+  m_AnchorMin: {x: 0.3741763, y: 0.85262793}
+  m_AnchorMax: {x: 0.4631763, y: 1}
+  m_AnchoredPosition: {x: 0.6000061, y: 1}
+  m_SizeDelta: {x: -1, y: -6}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2129330107
 MonoBehaviour:
