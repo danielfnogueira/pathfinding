@@ -17,3 +17,10 @@ public enum PathType : int
     Dijkstra = 8,
     NoName = 9
 }
+
+public enum AlgoType : int {
+    BFS = 0,
+    DFS = 1,
+    AStar = 2,
+    Dijkstra = 3
+}
