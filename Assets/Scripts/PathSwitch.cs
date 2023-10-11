@@ -10,6 +10,7 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
     public GameObject redPath;
     public GameObject greenPath;
     public GameObject bluePath;
+    public GameObject orangePath;
     public GameObject inPath;
     public GameObject outPath;
 
@@ -27,6 +28,8 @@ public class PathSwitch : MonoBehaviour, IPointerClickHandler
             types.Add(PathType.green);
         if (bluePath.activeSelf)
             types.Add(PathType.blue);
+        if (orangePath.activeSelf)
+            types.Add(PathType.orange);
         if (inPath.activeSelf)
             types.Add(PathType.enter);
         if (outPath.activeSelf)
@@ -71,6 +74,9 @@ public void AddPath(int type)
             case PathType.blue:
                 bluePath.SetActive(true);
                 break;
+            case PathType.orange:
+                orangePath.SetActive(true);
+                break;
             case PathType.enter:
                 inPath.SetActive(true);
                 break;
@@ -96,6 +102,9 @@ public void AddPath(int type)
             case PathType.blue:
                 bluePath.SetActive(false);
                 break;
+            case PathType.orange:
+                orangePath.SetActive(false);
+                break;
         }
     }
     
@@ -105,6 +114,7 @@ public void AddPath(int type)
         redPath.SetActive(false);
         greenPath.SetActive(false);
         bluePath.SetActive(false);
+        orangePath.SetActive(false);
         inPath.SetActive(false);
         outPath.SetActive(false);
     }
@@ -116,7 +126,7 @@ public void AddPath(int type)
     
     public bool IsOnlyWalk()
     {
-        return !blockPath.activeSelf && !redPath.activeSelf && !greenPath.activeSelf && !bluePath.activeSelf;
+        return !blockPath.activeSelf && !redPath.activeSelf && !greenPath.activeSelf && !bluePath.activeSelf && !orangePath.activeSelf;
     }
 
     public void OnPointerClick(PointerEventData eventData)

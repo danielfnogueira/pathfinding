@@ -5,8 +5,8 @@ public enum PathType : int
     red = 2,
     green = 3,
     blue = 4,
-    orange = 8, //TODO: IMPLEMENT
-    purple = 9, //TODO: IMPLEMENT
+    orange = 8,
+    //purple = 9
     enter = 5,
     exit = 6,
         
@@ -15,7 +15,7 @@ public enum PathType : int
     DFS = 3,
     AStar = 4,
     Dijkstra = 8,
-    NoName = 9
+    //NoName = 9
 }
 
 public enum AlgoType : int {

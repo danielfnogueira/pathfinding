@@ -53,5 +53,12 @@ public class PathCreator : MonoBehaviour
                 );
             }
         }
+        
+        foreach (Transform child in pathParent.transform)
+        {
+            if(child.name == "pathSample")
+                continue;
+            child.gameObject.GetComponent<PathData>().CalculateAdjacentList();
+        }
     }
 }
